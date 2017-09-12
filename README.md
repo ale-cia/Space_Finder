@@ -23,9 +23,7 @@ Space Track API
 Link to software that is required to install the app (e.g. node).
 
 - [Node.js](https://nodejs.org/en/)
-- Using Node's packet manager, Please install the following packages using npm
-    AngularJS 1.6.4
-    Express 4.13.1
+
 
 
 ### Installing
