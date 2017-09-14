@@ -25,8 +25,8 @@ router.post('/', function(req, res, next) {
       console.log("Error connecting: ", err);
       res.sendStatus(500);
     }
-    client.query("INSERT INTO chatinfo (username, password) VALUES ($1, $2) RETURNING id",
-      [saveUser.username, saveUser.password],
+    client.query("INSERT INTO chatinfo (username, password, name, description, location) VALUES ($1, $2, $3, $4, $5) RETURNING id",
+      [saveUser.username, saveUser.password, saveUser.name, saveUser.description, saveUser.location ],
         function (err, result) {
           client.end();
 
