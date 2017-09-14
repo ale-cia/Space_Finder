@@ -1,0 +1,6 @@
+CREATE TABLE chatinfo (
+ id SERIAL PRIMARY KEY,
+ name VARCHAR(100) NOT NULL,
+ description VARCHAR(1000) NOT NULL,
+ location VARCHAR (1000) NOT NULL
+);
