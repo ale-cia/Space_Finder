@@ -6,7 +6,13 @@
 
 var pg = require('pg');
 var url = require('url');
-var config = {};
+var config = {
+  database: 'spacechat',
+  host: 'localhost',
+  port: 5432,
+  max: 10,
+  idleTimeoutMillis: 30000
+};
 
 if (process.env.DATABASE_URL) {
   // Heroku gives a url, not a connection object
@@ -37,4 +43,4 @@ if (process.env.DATABASE_URL) {
   };
 }
 
-module.exports = new pg.Pool(config);
+module.exports = pg.Pool(config);
